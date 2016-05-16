@@ -46,6 +46,15 @@ class My_First_Widget extends WP_Widget {
 		// outputs the content of the widget
 	}
 
+	/**
+	 * Outputs the options form on admin
+	 *
+	 * @param array $instance The widget options
+	 */
+	public function form( $instance ) {
+		// outputs the options form on admin
+	}
+
 
 
 	/**
