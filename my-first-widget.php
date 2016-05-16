@@ -17,6 +17,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     die;
 }
 
+//* Appel des fichiers de traduction
+if ( ! function_exists('my_project_widget_load_textdomain') ) {
+	function my_project_widget_load_textdomain() {
+	  load_plugin_textdomain( 'my-first-widget', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+	}
+	add_action( 'plugins_loaded', 'my_project_widget_load_textdomain' );
+}
+
+
 //* Déclaration de la classe principale
 class My_First_Widget extends WP_Widget {
 
@@ -25,8 +34,6 @@ class My_First_Widget extends WP_Widget {
 	 *
 	 */
 	public function __construct() {
-
-		add_action( 'init', array( $this, 'widget_textdomain' ) );
 
 		$widget_ops = array(
 			'classname' => 'my-first-widget',
@@ -63,14 +70,6 @@ class My_First_Widget extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// processes widget options to be saved
-	}
-
-	/**
-	 * Call languages files
-	 *
-	 */
-	function widget_textdomain() {
-		load_plugin_textdomain( 'my-first-widget', false, plugin_dir_path( __FILE__ ) . '/languages/' );
 	}
 
 }
