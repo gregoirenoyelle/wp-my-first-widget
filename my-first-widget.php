@@ -28,6 +28,12 @@ class My_First_Widget extends WP_Widget {
 
 		add_action( 'init', array( $this, 'widget_textdomain' ) );
 
+		$widget_ops = array(
+			'classname' => 'my-first-widget',
+			'description' => 'My really first Widget',
+		);
+		parent::__construct( 'my-first-widget', 'My First Widget', $widget_ops );
+
 	}
 
 
