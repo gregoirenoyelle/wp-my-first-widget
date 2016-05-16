@@ -41,6 +41,10 @@ class My_First_Widget extends WP_Widget {
 		);
 		parent::__construct( 'my-first-widget', __('My First Widget','my-first-widget'), $widget_ops );
 
+		// Register stylesheet
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_styles' ), 99 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_widget_styles' ), 99 );
+
 	}
 
 	/**
@@ -70,6 +74,23 @@ class My_First_Widget extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// processes widget options to be saved
+	}
+
+	/**
+	 * Register styles for admin CSS
+	 *
+	 */
+	public function register_admin_styles() {
+		wp_enqueue_style( 'widget-admin-style', plugins_url('my-first-widget/css/admin.css') );
+	}
+
+
+	/**
+	 * Register styles for widget CSS
+	 *
+	 */
+	public function register_widget_styles() {
+		wp_enqueue_style( 'widget-front-style', plugins_url('my-first-widget/css/widget.css') );
 	}
 
 }
