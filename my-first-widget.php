@@ -30,9 +30,9 @@ class My_First_Widget extends WP_Widget {
 
 		$widget_ops = array(
 			'classname' => 'my-first-widget',
-			'description' => 'My really first Widget',
+			'description' => __('My really first Widget', 'my-first-widget')
 		);
-		parent::__construct( 'my-first-widget', 'My First Widget', $widget_ops );
+		parent::__construct( 'my-first-widget', __('My First Widget','my-first-widget'), $widget_ops );
 
 	}
 
