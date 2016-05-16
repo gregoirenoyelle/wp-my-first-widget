@@ -45,6 +45,10 @@ class My_First_Widget extends WP_Widget {
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_styles' ), 99 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_widget_styles' ), 99 );
 
+		// Register JavaScript
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_widget_scripts' ) );
+
 	}
 
 	/**
@@ -77,20 +81,25 @@ class My_First_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Register styles for admin CSS
+	 * Register styles for admin and Widget CSS
 	 *
 	 */
 	public function register_admin_styles() {
 		wp_enqueue_style( 'widget-admin-style', plugins_url('my-first-widget/css/admin.css') );
 	}
-
-
-	/**
-	 * Register styles for widget CSS
-	 *
-	 */
 	public function register_widget_styles() {
 		wp_enqueue_style( 'widget-front-style', plugins_url('my-first-widget/css/widget.css') );
+	}
+
+	/**
+	 * Register JavaScript for admin and widget
+	 *
+	 */
+	public function register_admin_scripts() {
+		wp_enqueue_script( 'widget-admin-scripts', plugins_url('my-first-widget/js/admin.js') );
+	}
+	public function register_widget_scripts() {
+		wp_enqueue_script( 'widget-front-scripts', plugins_url('my-first-widget/js/widget.js') );
 	}
 
 }
