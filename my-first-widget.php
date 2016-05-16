@@ -20,5 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 //* Déclaration de la classe principale
 class My_First_Widget extends WP_Widget {
 
+	/**
+	 * Sets up the widgets name etc
+	 *
+	 */
+	public function __construct() {
+
+	}
+
 
 }
