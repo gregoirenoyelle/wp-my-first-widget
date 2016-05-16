@@ -26,7 +26,17 @@ class My_First_Widget extends WP_Widget {
 	 */
 	public function __construct() {
 
+		add_action( 'init', array( $this, 'widget_textdomain' ) );
+
 	}
 
+
+	/**
+	 * Call languages files
+	 *
+	 */
+	function widget_textdomain() {
+		load_plugin_textdomain( 'my-first-widget', false, plugin_dir_path( __FILE__ ) . '/languages/' );
+	}
 
 }
