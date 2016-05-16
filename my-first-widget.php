@@ -36,6 +36,17 @@ class My_First_Widget extends WP_Widget {
 
 	}
 
+	/**
+	 * Outputs the content of the widget
+	 *
+	 * @param array $args
+	 * @param array $instance
+	 */
+	public function widget( $args, $instance ) {
+		// outputs the content of the widget
+	}
+
+
 
 	/**
 	 * Call languages files
