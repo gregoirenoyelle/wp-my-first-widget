@@ -55,7 +55,15 @@ class My_First_Widget extends WP_Widget {
 		// outputs the options form on admin
 	}
 
-
+	/**
+	 * Processing widget options on save
+	 *
+	 * @param array $new_instance The new options
+	 * @param array $old_instance The previous options
+	 */
+	public function update( $new_instance, $old_instance ) {
+		// processes widget options to be saved
+	}
 
 	/**
 	 * Call languages files
