@@ -16,3 +16,9 @@ Text Domain: my-first-widget
 if ( ! defined( 'ABSPATH' ) ) {
     die;
 }
+
+//* Déclaration de la classe principale
+class My_First_Widget extends WP_Widget {
+
+
+}
