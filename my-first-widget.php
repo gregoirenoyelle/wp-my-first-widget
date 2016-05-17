@@ -89,6 +89,8 @@ class My_First_Widget extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// processes widget options to be saved
+		$old_instance['name'] = $new_instance['name'];
+		return $old_instance;
 	}
 
 	/**
