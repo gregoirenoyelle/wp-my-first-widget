@@ -68,6 +68,16 @@ class My_First_Widget extends WP_Widget {
 	 */
 	public function form( $instance ) {
 		// outputs the options form on admin
+
+		// Parse default arguments
+		$instance = wp_parse_args(
+			(array)$instance,
+			array(
+				'name' => ''
+			)
+		);
+
+		// call file with HTML form
 		include( plugin_dir_path( __FILE__ ) . '/views/admin.php' );
 	}
 
