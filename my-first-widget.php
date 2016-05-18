@@ -73,7 +73,8 @@ class My_First_Widget extends WP_Widget {
 		$instance = wp_parse_args(
 			(array)$instance,
 			array(
-				'name' => ''
+				'name' => '',
+				'bio' => ''
 			)
 		);
 
