@@ -7,7 +7,8 @@
 
 	<div>
 		<label><?php _e('Your bio', 'my-first-widget'); ?></label>
-		<textarea id="<?php echo $this->get_field_id('bio'); ?>" class="widefat" name="<?php echo $this->get_field_name('bio'); ?>" rows="3" cols="30"><?php echo esc_textarea( $instance['bio'] ); ?></textarea>
+		<textarea id="<?php echo $this->get_field_id('bio'); ?>" class="widefat" name="<?php echo $this->get_field_name('bio'); ?>" rows="3" cols="30" maxlength="200"><?php echo esc_textarea( $instance['bio'] ); ?></textarea>
+		<p class="description"><?php _e('The bio shouldn\'t be longer than 200 caracters', 'my-first-widget'); ?></p>
 	</div>
 
 </div>
