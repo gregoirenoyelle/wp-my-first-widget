@@ -11,4 +11,13 @@
 		<p class="description"><?php _e('The bio shouldn\'t be longer than 200 caracters', 'my-first-widget'); ?></p>
 	</div>
 
+	<div>
+		<label><?php _e('Display Name', 'my-first-widget'); ?></label>
+		<select id="<?php echo $this->get_field_id('position'); ?>" class="widefat" name="<?php echo $this->get_field_name('position'); ?>" >
+			<option value="above" <?php selected( 'above', $instance['position'], true ); ?>><?php _e(' above the bio', 'my-first-widget'); ?></option>
+			<option value="below" <?php selected( 'below', $instance['position'], true ); ?>><?php _e(' below the bio', 'my-first-widget'); ?></option>
+		</select>
+
+	</div>
+
 </div>
