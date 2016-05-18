@@ -74,7 +74,8 @@ class My_First_Widget extends WP_Widget {
 			(array)$instance,
 			array(
 				'name' => '',
-				'bio' => ''
+				'bio' => '',
+				'position' => 'above'
 			)
 		);
 
