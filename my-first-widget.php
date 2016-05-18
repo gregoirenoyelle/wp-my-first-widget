@@ -91,6 +91,7 @@ class My_First_Widget extends WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		// processes widget options to be saved
 		$old_instance['name'] = strip_tags( stripslashes( $new_instance['name'] ) );
+		$old_instance['bio'] = strip_tags( stripslashes( $new_instance['bio'] ) );
 		return $old_instance;
 	}
 
