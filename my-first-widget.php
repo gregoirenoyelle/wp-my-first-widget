@@ -59,6 +59,9 @@ class My_First_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		// outputs the content of the widget
+
+		// call file with HTML
+		include( plugin_dir_path( __FILE__ ) . '/views/widget.php' );
 	}
 
 	/**
