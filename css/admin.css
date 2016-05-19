@@ -1,0 +1,12 @@
+.my-first-widget {
+	padding-top: 16px;
+}
+
+.my-first-widget div {
+	margin-bottom: 14px;
+}
+
+.my-first-widget label {
+	display: inline-block;
+	padding-bottom: 7px
+}
