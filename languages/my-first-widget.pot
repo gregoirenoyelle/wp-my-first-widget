@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: My First Widget\n"
-"POT-Creation-Date: 2016-05-16 07:21+0200\n"
+"POT-Creation-Date: 2016-05-19 07:30+0200\n"
 "PO-Revision-Date: 2016-05-16 07:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -15,18 +15,42 @@ msgstr ""
 "X-Poedit-WPHeader: my-first-widget.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: my-first-widget.php:33
+#: my-first-widget.php:40
 msgid "My really first Widget"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: my-first-widget.php:35
+#: my-first-widget.php:42
 msgid "My First Widget"
+msgstr ""
+
+#: views/admin.php:4
+msgid "Your Name"
+msgstr ""
+
+#: views/admin.php:9
+msgid "Your bio"
+msgstr ""
+
+#: views/admin.php:11
+msgid "The bio shouldn't be longer than 200 caracters"
+msgstr ""
+
+#: views/admin.php:15
+msgid "Display Name"
+msgstr ""
+
+#: views/admin.php:17
+msgid " above the bio"
+msgstr ""
+
+#: views/admin.php:18
+msgid " below the bio"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
