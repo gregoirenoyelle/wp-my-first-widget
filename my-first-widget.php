@@ -60,8 +60,18 @@ class My_First_Widget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		// outputs the content of the widget
 
+		// Rendre les arguments disponibles dans la fonction
+		// EXTR_SKIP préserve les variables
+		extract( $args, EXTR_SKIP );
+
+		// Affiche les balises par défaut au début
+		echo $before_widget;
+
 		// call file with HTML
 		include( plugin_dir_path( __FILE__ ) . '/views/widget.php' );
+
+		// Affiche les balises par défaut à la fin
+		echo $after_widget;
 	}
 
 	/**
